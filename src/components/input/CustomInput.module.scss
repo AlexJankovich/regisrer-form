@@ -1,0 +1,39 @@
+@import "./src/main";
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 4px 0;
+
+  .input {
+    @include input;
+    color: $innerTextColor;
+  }
+
+  .input:focus {
+    @include focus;
+  }
+
+  .label {
+    @include label;
+
+  }
+
+  .labelHidden {
+    visibility: hidden;
+  }
+
+  .errorMessage {
+    height: 18px;
+    padding-top: 8px;
+
+    @include text;
+    color: #FF7171;
+  }
+
+  .errorMessageHidden {
+    visibility: hidden;
+  }
+
+}

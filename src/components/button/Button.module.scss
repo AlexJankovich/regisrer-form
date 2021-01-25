@@ -1,0 +1,51 @@
+@import "./src/main";
+
+.button {
+  display: block;
+  height: 56px;
+  width: 100%;
+  background: $borderColorActive;
+  box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
+  border-radius: 6px;
+  outline: none;
+
+  &:hover {
+    background: $borderColorActive;
+    box-shadow: 0px 12px 24px rgba(44, 39, 56, 0.08), 0px 24px 48px rgba(44, 39, 56, 0.16);
+    border-radius: 6px;
+  }
+
+  .title {
+    height: 21px;
+    left: 65px;
+    right: 65px;
+    top: calc(50% - 21px / 2 + 0.5px);
+
+    @include text;
+    color: #EBF4F8;
+    text-align: center;
+  }
+}
+
+.buttonDisabled {
+  height: 56px;
+  width: 100%;
+  background: #DBE2EA;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.08);
+  border-radius: 6px;
+
+  .titleDisabled {
+    height: 21px;
+    left: 65px;
+    right: 65px;
+    top: calc(50% - 21px / 2 + 0.5px);
+
+    @include text;
+    color: #2C2738;
+
+    text-align: center;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+}

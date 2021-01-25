@@ -1,0 +1,42 @@
+$font: IBM Plex Sans;
+$textColor: #756F86;
+$innerTextColor: #2C2738;
+$borderColor: #DBE2EA;
+$borderColorActive: #0880AE;
+
+@mixin text {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+@mixin input {
+  height: 52px;
+  padding: 16px;
+  background: #FFFFFF;
+  border: 1px solid $borderColor;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+
+  @include text
+}
+
+@mixin focus {
+  border: 2px solid $borderColorActive;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+}
+
+@mixin label {
+  width: 40px;
+  height: 21px;
+  padding-bottom: 7px;
+
+  @include text;
+  color: $textColor;
+}
+

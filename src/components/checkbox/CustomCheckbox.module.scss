@@ -1,0 +1,43 @@
+@import "./src/main";
+
+.checkBoxWrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+
+  .checkbox {
+    height: 28px;
+    width: 28px;
+    border: 1px solid $borderColor;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+  }
+
+  span {
+    padding: 0 8px;
+    @include text;
+    color: $textColor;
+  }
+
+  img {
+    align-self: center;
+    width: 15px;
+    height: 11px;
+  }
+
+  .checked {
+    border: 1px solid $borderColorActive
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
