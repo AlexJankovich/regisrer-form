@@ -67,8 +67,12 @@ const Form = () => {
                     onChangeValueHandler={phone.changeValueHandler}
                     type={'text'}
                 />
-                <Select errorText={''} languageValue={language.changeValueHandler}/>
-                <CustomCheckbox checkCallBack={agreeCheckHandler}/>
+                <Select
+                    errorText={''}
+                    languageValue={language.changeValueHandler}/>
+                <CustomCheckbox
+                    checkCallBack={agreeCheckHandler}
+                    link={''}/>
                 <Button
                     title={'title'}
                     isDisabled={!isSubmitDisabled}/>

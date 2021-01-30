@@ -1,9 +1,9 @@
 import s from './CustomCheckbox.module.scss'
 import {useState} from "react";
-import mask from './../../assets/img/Maskmask.png'
 
 interface CheckBoxProps {
     checkCallBack: (checked: boolean) => void
+    link:string
 }
 
 const CustomCheckbox = (props: CheckBoxProps) => {
@@ -16,15 +16,12 @@ const CustomCheckbox = (props: CheckBoxProps) => {
     }
 
     return (
-        <div className={s.checkBoxWrapper}>
-            <div
-                className={isChecked ? `${s.checkbox} ${s.checked}` : s.checkbox}
-                onClick={checkHandler}
-            >
-                <img src={mask} alt="" className={isChecked ? '' : s.hidden}/>
-            </div>
-            <span> Принимаю  <a href="#">условия</a> пользования</span>
-        </div>
+        <>
+            <label className={s.checkBoxWrapper} >
+                <input type="checkbox" checked={isChecked} onChange={checkHandler}/>
+                <span> Принимаю  <a href={props.link}>условия</a> пользования</span>
+            </label>
+        </>
     )
 }
 

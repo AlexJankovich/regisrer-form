@@ -4,8 +4,27 @@
   display: flex;
   align-items: center;
   padding-bottom: 32px;
+  position: relative;
+  cursor: pointer;
 
-  .checkbox {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  span {
+    position: relative;
+    left: 36px;
+    @include text;
+    color: $textColor;
+  }
+
+  span:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -38px;
     height: 28px;
     width: 28px;
     border: 1px solid $borderColor;
@@ -16,24 +35,10 @@
     justify-content: center;
   }
 
-  span {
-    padding: 0 8px;
-    @include text;
-    color: $textColor;
-  }
-
-  img {
-    align-self: center;
-    width: 15px;
-    height: 11px;
-  }
-
-  .checked {
-    border: 1px solid $borderColorActive
-  }
-
-  .hidden {
-    visibility: hidden;
+  input:checked + span:before {
+    border: 1px solid $borderColorActive;
+    background: url("../../assets/img/Maskmask.png") no-repeat 6px 8px;
+    position: absolute;
   }
 
   a {
